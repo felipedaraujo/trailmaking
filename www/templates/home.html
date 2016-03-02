@@ -1,7 +1,9 @@
 <ion-pane ng-init="init()">
-  <ion-content scroll="false">
-    <div class="circle" ng-repeat="circle in circles" ng-style="{left:circle.screenX, top: circle.screenY}">
-      {{circle.number}}
+  <ion-content scroll="false" on-drag="drawLine($event)">
+    <div class="circle"
+         ng-repeat="circle in circles"
+         ng-style="{left:circle.screenX, top: circle.screenY}">
+      <p>{{circle.number}}</p>
     </div>
   </ion-content>
 </ion-pane>
