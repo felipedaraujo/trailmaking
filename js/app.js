@@ -26,12 +26,25 @@ starter.run(function($ionicPlatform) {
 })
 
 starter.config(function($stateProvider, $urlRouterProvider) {
-  $stateProvider.
-    state('home', {
-      url: '/home',
-      templateUrl: 'templates/home.html',
-      controller: 'HomeCtrl'
+  $stateProvider
+
+    .state('app', {
+      url: '/app',
+      abstract: true,
+      templateUrl: 'templates/menu.html',
+      controller: 'AppCtrl'
     })
 
-  $urlRouterProvider.otherwise('/home');
+    .state('app.test', {
+      cache: false,
+      url: '/test/:part',
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/test.html",
+          controller : "TestCtrl"
+        }
+      }
+    });
+
+  $urlRouterProvider.otherwise('/app/test/partA-sample');
 })
