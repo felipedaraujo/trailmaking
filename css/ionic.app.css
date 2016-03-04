@@ -9748,3 +9748,11 @@ a.button {
   .circle p {
     font-size: 24px;
     color: #fff; }
+  .circle .label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+    word-wrap: normal;
+    text-align: center;
+    margin-top: 20px; }
