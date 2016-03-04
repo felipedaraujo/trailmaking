@@ -9731,6 +9731,12 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.bar-header {
+  border: 0px;
+  border-bottom-color: transparent;
+  background-image: none;
+  border-bottom: none; }
+
 .center-vertical, .circle p {
   position: relative;
   top: 50%;

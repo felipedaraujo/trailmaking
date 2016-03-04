@@ -45,8 +45,8 @@ angular.module('starter.factories').
         { number: 19, screenX: '75%', screenY: '20%', label: '' },
         { number: 20, screenX: '60%', screenY: '20%', label: '' },
         { number: 21, screenX: '85%', screenY: '15%', label: '' },
-        { number: 22, screenX: '85%', screenY: '45%', label: '' },
-        { number: 23, screenX: '85%', screenY: '95%', label: '' },
+        { number: 22, screenX: '90%', screenY: '45%', label: '' },
+        { number: 23, screenX: '90%', screenY: '95%', label: '' },
         { number: 24, screenX: '80%', screenY: '65%', label: '' },
         { number: 25, screenX: '72%', screenY: '90%', label: 'end' }
       ];
