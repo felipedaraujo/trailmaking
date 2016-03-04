@@ -1,0 +1,8 @@
+<ion-content scroll="false" ng-init="init()" on-drag="drawLine($event)">
+  <div class="circle"
+       ng-repeat="circle in circles"
+       ng-style="{left:circle.screenX, top: circle.screenY}">
+    <p>{{circle.number}}</p>
+    <p class="label" ng-class="circle.label">{{circle.label}}</p>
+  </div>
+</ion-content>

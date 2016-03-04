@@ -1,7 +1,15 @@
 angular.module('starter.factories').
   factory('Circle', function() {
 
-    testA = function() {
+    var Circle = function(part) {
+      if (part == 'partA-sample') {
+        return partASample();
+      } else {
+        return partA();
+      }
+    };
+
+    partASample = function() {
       return [
         { number: 1, screenX: '50%', screenY: '50%', label: 'Begin' },
         { number: 2, screenX: '70%', screenY: '20%', label: '' },
@@ -14,7 +22,7 @@ angular.module('starter.factories').
       ];
     };
 
-    testB = function() {
+    partA = function() {
       return [
         { number: 1, screenX: '60%', screenY: '60%', label: 'begin' },
         { number: 2, screenX: '40%', screenY: '65%', label: '' },
@@ -44,8 +52,5 @@ angular.module('starter.factories').
       ];
     };
 
-    return {
-      testA: testA,
-      testB: testB
-    }
+    return Circle
   });

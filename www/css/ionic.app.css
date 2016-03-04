@@ -9756,3 +9756,10 @@ a.button {
     word-wrap: normal;
     text-align: center;
     margin-top: 20px; }
+
+.point {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #dadada; }
