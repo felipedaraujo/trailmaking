@@ -21,6 +21,15 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+// Overwrite Ionic
+
+.bar-header {
+  border: 0px;
+  border-bottom-color: transparent;
+  background-image: none;
+  border-bottom: none;
+}
+
 // My Styles
 
 $circle-size: 50px;
