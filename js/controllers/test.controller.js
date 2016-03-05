@@ -29,8 +29,6 @@ angular.module('starter.controllers').
       Ax = Ax || Bx;
       Ay = Ay || By;
 
-      console.log($scope.canvas);
-
       $scope.canvas.context.lineCap = "round";
       $scope.canvas.context.beginPath();
       $scope.canvas.context.moveTo(Ax, Ay);
