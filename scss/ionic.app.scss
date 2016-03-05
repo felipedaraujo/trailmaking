@@ -46,7 +46,7 @@ $circle-size: 50px;
   height: $circle-size;
   border-radius: 50%;
 
-  background-color: #000;
+  background-color: #212121;
   text-align: center;
   z-index: 10;
 
@@ -54,7 +54,8 @@ $circle-size: 50px;
 
   p {
     font-size: 24px;
-    color: #fff;
+    font-weight: bold;
+    color: #fafafa;
     @extend .center-vertical;
   }
 
