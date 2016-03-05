@@ -1,10 +1,15 @@
 angular.module('starter.controllers').
   controller('AppCtrl', function($scope, $state) {
-    var points = document.getElementsByClassName('point');
+
+    $scope.canvas = {
+      begin: true
+    };
 
     $scope.cleanTest = function() {
-      while(points.length > 0){
-        points[0].parentNode.removeChild(points[0]);
-      }
-    }
+      $scope.canvas.context.clearRect(0, 0,
+        $scope.canvas.container[0].width,
+        $scope.canvas.container[0].height);
+
+      $scope.canvas.begin = true;
+    };
   });
