@@ -4,8 +4,9 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 var starter = angular.module('starter', ['ionic', 'starter.controllers']);
-angular.module('starter.controllers',['starter.factories']);
+angular.module('starter.controllers',['starter.factories', 'starter.services']);
 angular.module('starter.factories',[]);
+angular.module('starter.services',[]);
 
 starter.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
