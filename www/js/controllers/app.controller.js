@@ -2,7 +2,7 @@ angular.module('starter.controllers').
   controller('AppCtrl', function($scope, $state) {
 
     $scope.canvas = {
-      begin: true
+      reset: true
     };
 
     $scope.cleanTest = function() {
@@ -10,6 +10,6 @@ angular.module('starter.controllers').
         $scope.canvas.container[0].width,
         $scope.canvas.container[0].height);
 
-      $scope.canvas.begin = true;
+      $scope.canvas.reset = true;
     };
   });
