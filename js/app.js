@@ -28,6 +28,10 @@ starter.run(function($ionicPlatform) {
 
 starter.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
+    .state('home', {
+      url: '/home',
+      templateUrl: 'templates/home.html'
+    })
 
     .state('app', {
       url: '/app',
@@ -47,5 +51,5 @@ starter.config(function($stateProvider, $urlRouterProvider) {
       }
     });
 
-  $urlRouterProvider.otherwise('/app/test/partA-sample');
+  $urlRouterProvider.otherwise('/home');
 })
