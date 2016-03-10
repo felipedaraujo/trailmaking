@@ -51,5 +51,5 @@ starter.config(function($stateProvider, $urlRouterProvider) {
       }
     });
 
-  $urlRouterProvider.otherwise('/app/test/partA-sample');
+  $urlRouterProvider.otherwise('/home');
 })
