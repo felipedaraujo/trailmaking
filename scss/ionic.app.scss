@@ -30,6 +30,26 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   border-bottom: none;
 }
 
+.bar.home {
+  position: initial;
+  height: 25%;
+}
+
+.scroll-content.home {
+  display: flex;
+  position: initial;
+  height: 75%;
+}
+
+.home .title {
+  font-size: 36px;
+  font-weight: bold;
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 // My Styles
 
 $circle-size: 50px;
