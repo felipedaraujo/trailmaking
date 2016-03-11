@@ -26,11 +26,7 @@ starter.run(function($ionicPlatform) {
   });
 })
 
-starter.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
-
-  $ionicConfigProvider.backButton.previousTitleText(false);
-  $ionicConfigProvider.backButton.icon('ion-android-arrow-back');
-  $ionicConfigProvider.backButton.text('')
+starter.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
     .state('home', {

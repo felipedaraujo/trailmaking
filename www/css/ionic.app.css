@@ -9753,23 +9753,50 @@ a.button {
   left: 50%;
   transform: translateX(-50%); }
 
+.home h4 {
+  padding-left: 72px; }
+
 .menu .item {
   border-width: 0; }
   .menu .item:last-child {
     border-top-width: 1px; }
 
+.col-15 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 15%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 15%;
+  -ms-flex: 0 0 15%;
+  flex: 0 0 15%;
+  max-width: 15%; }
+
+.col-70 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 70%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 70%;
+  -ms-flex: 0 0 70%;
+  flex: 0 0 70%;
+  max-width: 70%; }
+
+.col-offset-5 {
+  margin-left: 5%; }
+
 .container {
   height: 100%;
   background-color: #fff;
   max-width: 700px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  border-style: solid;
+  border-color: #ebebeb;
+  border-width: 0 1px; }
 
 .container .item {
   border-width: 0;
   background-color: transparent; }
   .container .item.item-input {
     border-bottom-width: 1px; }
-  .container .item.item-icon-right {
+  .container .item.item-icon-right-col {
     padding-top: 45px; }
 
 .center-vertical, .circle p {
