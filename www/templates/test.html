@@ -1,5 +1,5 @@
-<ion-content scroll="false" ng-init="init()" on-drag="drawLine($event)">
-  <canvas id="canvas" on-drag="drawLine($event)"></canvas>
+<ion-content class="test" scroll="false" ng-init="init()" on-drag="drawLine($event)" on-release="resetLine()">
+  <canvas id="canvas" on-drag="drawLine($event)" on-release="resetLine()"></canvas>
   <div class="circle"
        ng-repeat="circle in circles"
        ng-style="{left:circle.screenX, top: circle.screenY}">

@@ -42,6 +42,11 @@ angular.module('starter.controllers').
       Ay = By;
     }
 
+    $scope.resetLine = function() {
+      Ax = null;
+      Ay = null;
+    }
+
     canvasInit = function() {
       $scope.canvas.container = angular.element(document.querySelector('#canvas'));
       $scope.canvas.context = $scope.canvas.container[0].getContext("2d");
@@ -76,7 +81,7 @@ angular.module('starter.controllers').
     }
 
     getContentSize = function() {
-      var div = angular.element(document.querySelector('.scroll-content'));
+      var div = angular.element(document.querySelector('.test'));
       return {
         width: div[0].offsetWidth,
         height: div[0].offsetHeight
