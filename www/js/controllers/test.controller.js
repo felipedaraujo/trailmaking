@@ -8,6 +8,7 @@ angular.module('starter.controllers').
     var canvasInitiate = false;
 
     $scope.init = function() {
+      $scope.state.param = $stateParams.part;
       $scope.circles = new Circle($stateParams.part);
     };
 

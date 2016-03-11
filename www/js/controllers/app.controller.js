@@ -1,9 +1,8 @@
 angular.module('starter.controllers').
-  controller('AppCtrl', function($scope, $state) {
+  controller('AppCtrl', function($scope) {
 
-    $scope.canvas = {
-      reset: true
-    };
+    $scope.state = { param: "" };
+    $scope.canvas = { reset: true };
 
     $scope.cleanTest = function() {
       $scope.canvas.context.clearRect(0, 0,

@@ -50,6 +50,14 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   transform: translateX(-50%);
 }
 
+.item {
+  border-width: 0;
+
+  &:last-child {
+    border-top-width: 1px;
+  }
+}
+
 // My Styles
 
 $circle-size: 50px;
