@@ -9754,10 +9754,24 @@ a.button {
   left: 50%;
   transform: translateX(-50%); }
 
-.item {
+.menu .item {
   border-width: 0; }
-  .item:last-child {
+  .menu .item:last-child {
     border-top-width: 1px; }
+
+.container {
+  height: 100%;
+  background-color: #fff;
+  max-width: 700px;
+  margin: 0 auto; }
+
+.container .item {
+  border-width: 0;
+  background-color: transparent; }
+  .container .item.item-input {
+    border-bottom-width: 1px; }
+  .container .item.item-icon-right {
+    padding-top: 45px; }
 
 .center-vertical, .circle p {
   position: relative;
