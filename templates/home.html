@@ -1,16 +1,29 @@
-<ion-pane>
+<ion-pane ng-init="init()">
   <ion-header-bar class="bar-dark home">
     <h1 class="title">Trail Making</h1>
   </ion-header-bar>
 
   <ion-content class="home" scroll="false">
-    <div class="row">
-       <div class="col text-center">
-          <a href="#/app/test/partA-sample" class="button button-large button-positive">Take test</a>
-       </div>
+    <div class="container">
+      <div class="row">
+        <div class="col col-90 col-offset-5">
+          <h4>Applicants</h4>
+
+          <div class="list">
+            <a class="item item-avatar item-icon-right" href="#" ng-repeat="applicant in applicants">
+              <img src="http://ionicframework.com/img/docs/venkman.jpg">
+              <h2>{{applicant.name}}</h2>
+              <p>{{applicant.age}}</p>
+              <i class="icon ion-android-more-vertical"></i>
+            </a>
+        </div>
+
+        </div>
+      </div>
+
+      <button class="round-overlay-button assertive button button-icon icon ion-android-add left" ng-click="goTo('/applicant/new')">
+      </button>
     </div>
   </ion-content>
 
-  <button class="round-overlay-button bottom-right assertive button button-icon icon ion-android-add light" ng-click="goTo('/applicant/new')">
-  </button>
 </ion-pane>
