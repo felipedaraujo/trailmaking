@@ -50,6 +50,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   transform: translateX(-50%);
 }
 
+.home h4 {
+  padding-left: 72px;
+}
+
 .menu .item {
   border-width: 0;
 
@@ -144,15 +148,6 @@ button.button-icon.round-overlay-button {
   transform: translate3d(0,0,0);
   backface-visibility: hidden;
 
-  &.energized {
-    background-color: $energized;
-    color: white;
-
-    &.activated {
-      background-color: darken($energized, 15%);
-    }
-  }
-
   &.assertive {
     background-color: $assertive;
     color: white;
@@ -162,41 +157,9 @@ button.button-icon.round-overlay-button {
     }
   }
 
-  &.positive {
-    background-color: $positive;
-    color: white;
-
-    &.activated {
-      background-color: darken($positive, 15%);
-    }
-  }
-
-  &.stable {
-    background-color: $disabledText;
-    color: $disabledText;
-
-    &.activated {
-      background-color: darken($disabledText, 15%);
-    }
-  }
-
   &.icon {
     &:before {
       font-size: 24px;
-    }
-  }
-
-  &.small {
-    height: $floating-button-small-size;
-    width: $floating-button-small-size;
-    min-height: 40px;
-    padding: 0;
-    border: none;
-
-    &.icon {
-      &:before {
-        line-height: 40px;
-      }
     }
   }
 
@@ -206,24 +169,8 @@ button.button-icon.round-overlay-button {
   }
 
   &.left {
-    left: 1px;
-    top: 16px;
-  }
-
-  &.bottom-edge-right {
-    bottom: -24px;
-    right: 16px;
-    z-index: 12;
-  }
-
-  &.bottom-right {
-    bottom: 0;
-    margin-bottom: 16px;
-    right: 16px;
-    z-index: 2;
-
-    &.slide-down {
-      transform: translate3d(0,88px,0);
-    }
+    top: 25%;
+    transform: translateY(-50%);
+    margin-left: 5%;
   }
 }

@@ -9742,7 +9742,6 @@ a.button {
   height: 25%; }
 
 .scroll-content.home {
-  display: flex;
   position: initial;
   height: 75%; }
 
@@ -9814,50 +9813,17 @@ button.button-icon.round-overlay-button {
   transition: all linear 220ms;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden; }
-  button.button-icon.round-overlay-button.energized {
-    background-color: #ffc900;
-    color: white; }
-    button.button-icon.round-overlay-button.energized.activated {
-      background-color: #b38d00; }
   button.button-icon.round-overlay-button.assertive {
     background-color: #ef473a;
     color: white; }
     button.button-icon.round-overlay-button.assertive.activated {
       background-color: #cc1e11; }
-  button.button-icon.round-overlay-button.positive {
-    background-color: #387ef5;
-    color: white; }
-    button.button-icon.round-overlay-button.positive.activated {
-      background-color: #0b56d6; }
-  button.button-icon.round-overlay-button.stable {
-    background-color: rgba(0, 0, 0, 0.26);
-    color: rgba(0, 0, 0, 0.26); }
-    button.button-icon.round-overlay-button.stable.activated {
-      background-color: rgba(0, 0, 0, 0.26); }
   button.button-icon.round-overlay-button.icon:before {
     font-size: 24px; }
-  button.button-icon.round-overlay-button.small {
-    height: 40px;
-    width: 40px;
-    min-height: 40px;
-    padding: 0;
-    border: none; }
-    button.button-icon.round-overlay-button.small.icon:before {
-      line-height: 40px; }
   button.button-icon.round-overlay-button.activated {
     opacity: 1;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 17px 0 rgba(0, 0, 0, 0.2); }
   button.button-icon.round-overlay-button.left {
-    left: 1px;
-    top: 16px; }
-  button.button-icon.round-overlay-button.bottom-edge-right {
-    bottom: -24px;
-    right: 16px;
-    z-index: 12; }
-  button.button-icon.round-overlay-button.bottom-right {
-    bottom: 0;
-    margin-bottom: 16px;
-    right: 16px;
-    z-index: 2; }
-    button.button-icon.round-overlay-button.bottom-right.slide-down {
-      transform: translate3d(0, 88px, 0); }
+    top: 25%;
+    transform: translateY(-50%);
+    margin-left: 5%; }
