@@ -50,7 +50,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   transform: translateX(-50%);
 }
 
-.item {
+.menu .item {
   border-width: 0;
 
   &:last-child {
@@ -61,6 +61,28 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // My Styles
 
 $circle-size: 50px;
+
+.container {
+  height: 100%;
+  background-color: #fff;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.container .item {
+  border-width: 0;
+  background-color: transparent;
+
+  &.item-input {
+    border-bottom-width: 1px;
+  }
+
+  &.item-icon-right {
+    padding-top: 45px;
+  }
+}
+
+
 
 .center-vertical {
   position: relative;

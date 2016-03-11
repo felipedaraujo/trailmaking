@@ -26,11 +26,29 @@ starter.run(function($ionicPlatform) {
   });
 })
 
-starter.config(function($stateProvider, $urlRouterProvider) {
+starter.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+
+  $ionicConfigProvider.backButton.previousTitleText(false);
+  $ionicConfigProvider.backButton.icon('ion-android-arrow-back');
+  $ionicConfigProvider.backButton.text('')
+
   $stateProvider
     .state('home', {
       url: '/home',
-      templateUrl: 'templates/home.html'
+      templateUrl: 'templates/home.html',
+      controller: 'HomeCtrl'
+    })
+
+    .state('applicant', {
+      url: '/applicant',
+      abstract: true,
+      templateUrl: 'templates/applicant.html'
+    })
+
+    .state('applicant.new', {
+      url: '/new',
+      templateUrl: 'templates/applicant/new.html',
+      controller: 'ApplicantCtrl'
     })
 
     .state('app', {
