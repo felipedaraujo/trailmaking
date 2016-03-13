@@ -30,6 +30,7 @@ starter.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
     .state('home', {
+      cache: false,
       url: '/home',
       templateUrl: 'templates/home.html',
       controller: 'HomeCtrl'
@@ -42,19 +43,20 @@ starter.config(function($stateProvider, $urlRouterProvider) {
     })
 
     .state('applicant.new', {
+      cache: false,
       url: '/new',
       templateUrl: 'templates/applicant/new.html',
       controller: 'ApplicantCtrl'
     })
 
-    .state('app', {
-      url: '/app',
+    .state('menu', {
+      url: '/menu',
       abstract: true,
       templateUrl: 'templates/menu.html',
       controller: 'AppCtrl'
     })
 
-    .state('app.test', {
+    .state('menu.test', {
       cache: false,
       url: '/test/:part',
       views: {
