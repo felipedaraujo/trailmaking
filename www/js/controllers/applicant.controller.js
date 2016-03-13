@@ -1,5 +1,5 @@
 angular.module('starter.controllers').
-  controller('ApplicantCtrl', function($scope, $location) {
+  controller('ApplicantCtrl', function($scope, $location, Popup) {
 
     $scope.applicant = {};
 
@@ -8,7 +8,11 @@ angular.module('starter.controllers').
     }
 
     $scope.goBack = function() {
-      $scope.goTo('/home');
+      if ($scope.applicant.name || $scope.applicant.age) {
+        Popup.discard();
+      } else {
+        $scope.goTo('/home');
+      }
     }
 
     $scope.confirm = function() {
@@ -22,7 +26,7 @@ angular.module('starter.controllers').
 
         window.localStorage[index] = JSON.stringify(applicant);
 
-        $scope.goTo('/home');
+        Popup.confirm();
 
       } else {
         $scope.goTo('/home');
