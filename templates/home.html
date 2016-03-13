@@ -3,12 +3,11 @@
     <h1 class="title">Trail Making</h1>
   </ion-header-bar>
 
-  <ion-content class="home" scroll="false">
+  <ion-content class="home">
     <div class="container">
       <div class="row">
         <div class="col col-90 col-offset-5">
           <h4>Applicants</h4>
-
           <div class="list">
             <a class="item item-avatar item-icon-right" href="#" ng-repeat="applicant in applicants">
               <img src="http://ionicframework.com/img/docs/venkman.jpg">
@@ -16,14 +15,12 @@
               <p>{{applicant.age}}</p>
               <i class="icon ion-android-more-vertical"></i>
             </a>
-        </div>
-
+          </div>
         </div>
       </div>
 
-      <button class="round-overlay-button assertive button button-icon icon ion-android-add left" ng-click="goTo('/applicant/new')">
-      </button>
+      <button class="round-overlay-button assertive button button-icon icon ion-android-add bottom-right" ng-click="goTo('/applicant/new')"></button>
+
     </div>
   </ion-content>
-
 </ion-pane>
