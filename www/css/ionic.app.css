@@ -9731,19 +9731,24 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.scroll {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
 .bar-header {
   border: 0px;
   border-bottom-color: transparent;
   background-image: none;
   border-bottom: none; }
 
-.bar.home {
-  position: initial;
+.home.bar {
   height: 25%; }
 
-.scroll-content.home {
-  position: initial;
-  height: 75%; }
+.home.has-header {
+  top: 25%; }
 
 .home .title {
   font-size: 36px;
@@ -9752,6 +9757,10 @@ a.button {
   top: 40%;
   left: 50%;
   transform: translateX(-50%); }
+
+.home.scroll-content {
+  height: 75%;
+  overflow: initial; }
 
 .home h4 {
   padding-left: 72px; }
@@ -9789,15 +9798,15 @@ a.button {
   margin: 0 auto;
   border-style: solid;
   border-color: #ebebeb;
-  border-width: 0 1px; }
-
-.container .item {
-  border-width: 0;
-  background-color: transparent; }
-  .container .item.item-input {
-    border-bottom-width: 1px; }
-  .container .item.item-icon-right-col {
-    padding-top: 45px; }
+  border-width: 0 1px;
+  position: relative; }
+  .container .item {
+    border-width: 0;
+    background-color: transparent; }
+    .container .item.item-input {
+      border-bottom-width: 1px; }
+    .container .item.item-icon-right-col {
+      padding-top: 45px; }
 
 .center-vertical, .circle p {
   position: relative;
@@ -9834,7 +9843,7 @@ button.button-icon.round-overlay-button {
   min-height: 56px;
   padding: 0;
   border: none;
-  background-color: #ffc900;
+  background-color: #ef473a;
   color: white;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   transition: all linear 220ms;
@@ -9850,7 +9859,8 @@ button.button-icon.round-overlay-button {
   button.button-icon.round-overlay-button.activated {
     opacity: 1;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 17px 0 rgba(0, 0, 0, 0.2); }
-  button.button-icon.round-overlay-button.left {
-    top: 25%;
-    transform: translateY(-50%);
-    margin-left: 5%; }
+  button.button-icon.round-overlay-button.bottom-right {
+    bottom: 0;
+    margin-bottom: 16px;
+    right: 16px;
+    z-index: 2; }

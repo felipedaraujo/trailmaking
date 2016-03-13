@@ -23,6 +23,14 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Overwrite Ionic
 
+.scroll {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .bar-header {
   border: 0px;
   border-bottom-color: transparent;
@@ -30,27 +38,32 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   border-bottom: none;
 }
 
-.bar.home {
-  position: initial;
-  height: 25%;
-}
+.home {
+  &.bar {
+    height: 25%;
+  }
 
-.scroll-content.home {
-  position: initial;
-  height: 75%;
-}
+  &.has-header {
+    top: 25%;
+  }
 
-.home .title {
-  font-size: 36px;
-  font-weight: bold;
-  position: relative;
-  top: 40%;
-  left: 50%;
-  transform: translateX(-50%);
-}
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-.home h4 {
-  padding-left: 72px;
+  &.scroll-content {
+    height: 75%;
+    overflow: initial;
+  }
+
+  h4 {
+    padding-left: 72px;
+  }
 }
 
 .menu .item {
@@ -97,20 +110,22 @@ $circle-size: 50px;
   border-style: solid;
   border-color: #ebebeb;
   border-width: 0 1px;
+  position: relative;
+
+  .item {
+    border-width: 0;
+    background-color: transparent;
+
+    &.item-input {
+      border-bottom-width: 1px;
+    }
+
+    &.item-icon-right-col {
+      padding-top: 45px;
+    }
+  }
 }
 
-.container .item {
-  border-width: 0;
-  background-color: transparent;
-
-  &.item-input {
-    border-bottom-width: 1px;
-  }
-
-  &.item-icon-right-col {
-    padding-top: 45px;
-  }
-}
 
 .center-vertical {
   position: relative;
@@ -164,7 +179,7 @@ button.button-icon.round-overlay-button {
   padding: 0;
   border: none;
 
-  background-color: $energized;
+  background-color: $assertive;
   color: white;
 
   box-shadow: $material-shadow;
@@ -192,9 +207,10 @@ button.button-icon.round-overlay-button {
     box-shadow: $material-shadow-pressed;
   }
 
-  &.left {
-    top: 25%;
-    transform: translateY(-50%);
-    margin-left: 5%;
+  &.bottom-right {
+    bottom: 0;
+    margin-bottom: 16px;
+    right: 16px;
+    z-index: 2;
   }
 }
