@@ -17,7 +17,6 @@ angular.module('starter.controllers').
 
     $scope.confirm = function() {
       if ($scope.applicant.name) {
-
         var index = window.localStorage.length.toString();
         var applicant = {
           name: $scope.applicant.name,
@@ -27,7 +26,6 @@ angular.module('starter.controllers').
         window.localStorage[index] = JSON.stringify(applicant);
 
         Popup.confirm();
-
       } else {
         $scope.goTo('/home');
       }
