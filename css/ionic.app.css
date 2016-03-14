@@ -9770,6 +9770,9 @@ a.button {
   .menu .item:last-child {
     border-top-width: 1px; }
 
+.popover {
+  height: 174px; }
+
 .col-15 {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 15%;
