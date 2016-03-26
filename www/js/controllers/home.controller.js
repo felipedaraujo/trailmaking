@@ -1,5 +1,5 @@
 angular.module('starter.controllers').
-  controller('HomeCtrl', function($scope, $location, $ionicPopover) {
+  controller('HomeCtrl', function($scope, $location, $ionicPopover, $ionicPopup) {
 
     var template = 'templates/popover.html';
 
@@ -10,20 +10,33 @@ angular.module('starter.controllers').
     });
 
     $scope.init = function() {
-      $scope.applicants = getAll();
+      updateApplicants();
     }
 
     $scope.goTo = function(path) {
       $location.path(path);
     }
 
-    $scope.options = function(applicant) {
-      $scope.popover.show(applicant);
+    $scope.options = function(event, applicant) {
+      $scope.currentApplicant = applicant;
+      $scope.popover.show(event);
     };
 
-    $scope.takeTest = function() {}
+    $scope.takeTest = function() {
+      $scope.popover.remove();
 
-    $scope.edit = function() {}
+      $scope.goTo('/test/part-a-sample')
+    }
+
+    $scope.edit = function() {
+      $scope.popover.remove();
+
+      $scope.goTo('/applicant/' + $scope.currentApplicant.id);
+    }
+
+    updateApplicants = function() {
+      $scope.applicants = getAll();
+    };
 
     getAll = function() {
       var all = [];

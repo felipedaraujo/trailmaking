@@ -7,7 +7,7 @@ angular.module('starter.services').
         buttons: [
           { text: 'Cancel' },
           { text: 'Discard',
-            onTap: function(event) {
+            onTap: function() {
               $location.path('/home');
             }
           }
@@ -20,13 +20,13 @@ angular.module('starter.services').
         title: 'Take test now?',
         buttons: [
           { text: 'No',
-            onTap: function(event) {
+            onTap: function() {
               $location.path('/home');
             }
           },
           { text: 'Yes',
-            onTap: function(event) {
-              $location.path('/menu/test/partA-sample');
+            onTap: function() {
+              $location.path('/test/part-a-sample');
             }
           }
         ]

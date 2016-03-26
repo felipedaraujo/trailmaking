@@ -1,14 +1,25 @@
 angular.module('starter.controllers').
-  controller('ApplicantCtrl', function($scope, $location, Popup) {
+  controller('ApplicantCtrl', function($rootScope, $scope, $location, $stateParams, Popup) {
 
     $scope.applicant = {};
+
+    $scope.init = function(){
+      if ($stateParams.param == 'new') {
+        $scope.title = "Add new applicant"
+      } else {
+        let applicant = JSON.parse(window.localStorage.getItem($stateParams.param));
+        $scope.applicant = applicant;
+
+        $scope.title = "Edit applicant"
+      }
+    }
 
     $scope.goTo = function(path) {
       $location.path(path);
     }
 
     $scope.goBack = function() {
-      if ($scope.applicant.name || $scope.applicant.age) {
+      if (updated()) {
         Popup.discard();
       } else {
         $scope.goTo('/home');
@@ -17,17 +28,26 @@ angular.module('starter.controllers').
 
     $scope.confirm = function() {
       if ($scope.applicant.name) {
-        var index = window.localStorage.length.toString();
-        var applicant = {
-          name: $scope.applicant.name,
-          age: $scope.applicant.age
-        };
-
-        window.localStorage[index] = JSON.stringify(applicant);
-
+        createUpdate();
         Popup.confirm();
       } else {
-        $scope.goTo('/home');
+        $location.path('/home');
       }
+    }
+
+    createUpdate = function() {
+      $scope.applicant['id'] = getIndex()
+      window.localStorage[$scope.applicant.id] = JSON.stringify($scope.applicant);
+    }
+
+    getIndex = function() {
+      return $scope.applicant.id || window.localStorage.length.toString();
+    }
+
+    updated = function(){
+      let index = getIndex()
+      let applicant = window.localStorage.getItem(index);
+
+      return !$rootScope.emptyObject($scope.applicant) && applicant != JSON.stringify($scope.applicant);
     }
   });

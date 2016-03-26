@@ -2,7 +2,7 @@ angular.module('starter.factories').
   factory('Circle', function() {
 
     var Circle = function(part) {
-      if (part == 'partA-sample') {
+      if (part == 'part-a-sample') {
         return partASample();
       } else {
         return partA();
