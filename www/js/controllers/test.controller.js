@@ -21,7 +21,9 @@ angular.module('starter.controllers').
       var center = event.gesture.center;
       var isLast = isLastCircle(center);
 
-      if ($stateParams.part == 'partA' && isLast) alert(Timer.stop());
+      if ($stateParams.part == 'partA' && isLast) {
+        alert(Timer.stop());
+      }
 
       if ($scope.canvas.reset) resetLine();
 

@@ -25,7 +25,7 @@ angular.module('starter.controllers').
     $scope.takeTest = function() {
       $scope.popover.remove();
 
-      $scope.goTo('/test/part-a-sample')
+      $scope.goTo('/test/part-a-sample/' + $scope.currentApplicant.id)
     }
 
     $scope.edit = function() {

@@ -25,6 +25,4 @@ angular.module('starter.services').
 
       return minutes + ':' + seconds;
     }
-
-
   });

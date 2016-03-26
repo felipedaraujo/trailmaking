@@ -15,7 +15,7 @@ angular.module('starter.services').
       });
     };
 
-    this.confirm = function() {
+    this.confirm = function(applicantId) {
       $ionicPopup.confirm({
         title: 'Take test now?',
         buttons: [
@@ -26,7 +26,7 @@ angular.module('starter.services').
           },
           { text: 'Yes',
             onTap: function() {
-              $location.path('/test/part-a-sample');
+              $location.path('/test/part-a-sample/' + applicantId);
             }
           }
         ]
