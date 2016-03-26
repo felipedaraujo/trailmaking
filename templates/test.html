@@ -1,4 +1,4 @@
-<ion-content class="test" scroll="false" ng-init="init()" on-drag="drawLine($event)" on-release="resetLine()">
+<ion-content class="test" scroll="false" has-bouncing="false" ng-init="init()" on-drag="drawLine($event)" on-release="resetLine()">
   <canvas id="canvas" on-drag="drawLine($event)" on-release="resetLine()"></canvas>
   <div class="circle"
        ng-repeat="circle in circles"
