@@ -23,7 +23,7 @@ angular.module('starter').
 
       .state('menu.test', {
         cache: false,
-        url: '/test/:part',
+        url: '/test/:part/:applicantId',
         views: {
           'menuContent' :{
             templateUrl: "templates/test.html",

@@ -29,14 +29,14 @@ angular.module('starter.controllers').
     $scope.confirm = function() {
       if ($scope.applicant.name) {
         createUpdate();
-        Popup.confirm();
+        Popup.confirm($scope.applicant.id);
       } else {
         $location.path('/home');
       }
     }
 
     createUpdate = function() {
-      $scope.applicant['id'] = getIndex()
+      $scope.applicant.id = getIndex()
       window.localStorage[$scope.applicant.id] = JSON.stringify($scope.applicant);
     }
 
