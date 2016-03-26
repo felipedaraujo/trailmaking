@@ -9,6 +9,8 @@ angular.module('starter.controllers').
 
     $scope.init = function() {
       $scope.state.param = $stateParams.part;
+      $scope.currentApplicant =
+        window.localStorage.getItem($stateParams.applicantId);
       $scope.circles = new Circle($stateParams.part);
     };
 
@@ -22,7 +24,9 @@ angular.module('starter.controllers').
       var isLast = isLastCircle(center);
 
       if ($stateParams.part == 'partA' && isLast) {
-        alert(Timer.stop());
+        var duration = Timer.stop();
+        alert(duration);
+        updateApplicant(duration);
       }
 
       if ($scope.canvas.reset) resetLine();
@@ -103,6 +107,13 @@ angular.module('starter.controllers').
         x: content.width * screenX / 100,
         y: content.height * screenY / 100
       }
+    }
+
+    updateApplicant = function(duration) {
+      var index = $scope.currentApplicant.id;
+      $scope.currentApplicant.takenAt = new Date();
+      $scope.currentApplicant.time = duration;
+      window.localStorage[index] = JSON.stringify($scope.currentApplicant);
     }
 
   });
