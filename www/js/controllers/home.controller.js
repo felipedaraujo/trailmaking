@@ -45,8 +45,8 @@ angular.module('starter.controllers').
 
     getAll = function() {
       var all = [];
-      for (var i = window.localStorage.length - 1; i >= 0; i--) {
-        all.push(JSON.parse(window.localStorage[i]));
+      for (var key in window.localStorage) {
+        all.push(JSON.parse(window.localStorage[key]));
       }
       return all;
     }
