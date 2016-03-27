@@ -9,8 +9,10 @@ angular.module('starter.controllers').
 
     $scope.init = function() {
       $scope.state.param = $stateParams.part;
-      $scope.currentApplicant =
-        window.localStorage.getItem($stateParams.applicantId);
+      $scope.state.applicantId = $stateParams.applicantId;
+      $scope.applicant = JSON.parse(
+        window.localStorage.getItem($stateParams.applicantId)
+      );
       $scope.circles = new Circle($stateParams.part);
     };
 
@@ -23,7 +25,7 @@ angular.module('starter.controllers').
       var center = event.gesture.center;
       var isLast = isLastCircle(center);
 
-      if ($stateParams.part == 'partA' && isLast) {
+      if ($stateParams.part == 'part-a' && isLast) {
         var duration = Timer.stop();
         alert(duration);
         updateApplicant(duration);
@@ -63,7 +65,11 @@ angular.module('starter.controllers').
       setCanvasSize(content);
       lastCircleCenter = getCircleCenter(content, lastCircle);
 
-      if ($stateParams.part == 'partA') Timer.start();
+      if ($stateParams.part == 'part-a') {
+
+        Timer.start();
+        console.log("Timer started");
+      }
       canvasInitiate = true;
     }
 
@@ -110,10 +116,10 @@ angular.module('starter.controllers').
     }
 
     updateApplicant = function(duration) {
-      var index = $scope.currentApplicant.id;
-      $scope.currentApplicant.takenAt = new Date();
-      $scope.currentApplicant.time = duration;
-      window.localStorage[index] = JSON.stringify($scope.currentApplicant);
+      var index = $scope.applicant.id;
+      $scope.applicant.takenAt = new Date();
+      $scope.applicant.time = duration;
+      window.localStorage[index] = JSON.stringify($scope.applicant);
     }
 
   });

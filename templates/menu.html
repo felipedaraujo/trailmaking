@@ -18,18 +18,22 @@
     </ion-header-bar>
     <ion-content scroll="false">
       <ion-list>
-        <a menu-close class="item item-icon-left" href="#/test/part-a" ng-if="state.param == 'part-a-sample'">
-          <i class="icon ion-play"></i>
-          Start test
-        </a>
-        <a menu-close class="item item-icon-left" ng-click="cleanTest()" ng-if="state.param == 'part-a-sample'">
-          <i class="icon ion-android-phone-portrait"></i>
-          Clean screen
-        </a>
-        <a menu-close class="item item-icon-left" ng-click="cleanTest()" ng-if="state.param == 'part-a'">
-          <i class="icon ion-refresh"></i>
-          Restart test
-        </a>
+        <div ng-if="state.param == 'part-a-sample'">
+          <a menu-close class="item item-icon-left" ng-href="#/test/part-a/{{state.applicantId}}">
+            <i class="icon ion-play"></i>
+            Start test
+          </a>
+          <a menu-close class="item item-icon-left" ng-click="cleanTest()">
+            <i class="icon ion-android-phone-portrait"></i>
+            Clean screen
+          </a>
+        </div>
+        <div ng-if="state.param == 'part-a'">
+          <a menu-close class="item item-icon-left" ng-click="cleanTest()">
+            <i class="icon ion-refresh"></i>
+            Restart test
+          </a>
+        </div>
         <a menu-close class="item item-icon-left" href="#/home">
           <i class="icon ion-android-exit"></i>
           Exit
