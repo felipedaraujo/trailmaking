@@ -1,7 +1,7 @@
 angular.module('starter.controllers').
   controller('AppCtrl', function($scope) {
 
-    $scope.state = { param: "" };
+    $scope.state = {};
     $scope.canvas = { reset: true };
 
     $scope.cleanTest = function() {

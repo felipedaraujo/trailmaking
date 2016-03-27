@@ -12,7 +12,8 @@
             <a class="item item-avatar item-icon-right" ng-repeat="applicant in applicants">
               <img src="http://ionicframework.com/img/docs/venkman.jpg">
               <h2>{{applicant.name}}</h2>
-              <p>{{applicant.age}}</p>
+              <p ng-show="applicant.takenAt">{{takenAt(applicant.takenAt)}}</p>
+              <p ng-hide="applicant.takenAt">Test not taken yet</p>
               <i class="icon ion-android-more-vertical" ng-click="options($event, applicant)"></i>
             </a>
           </div>

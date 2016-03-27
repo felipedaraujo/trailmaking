@@ -1,0 +1,1 @@
+- Timer only start when applicant touch the screen.

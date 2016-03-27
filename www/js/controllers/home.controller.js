@@ -34,6 +34,11 @@ angular.module('starter.controllers').
       $scope.goTo('/applicant/' + $scope.currentApplicant.id);
     }
 
+    $scope.takenAt = function(dateTime) {
+      var date = new Date(dateTime);
+      return date.toDateString();
+    }
+
     updateApplicants = function() {
       $scope.applicants = getAll();
     };
