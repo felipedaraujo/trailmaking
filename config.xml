@@ -2,7 +2,7 @@
 <widget id="com.trailmaking" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Trail Making</name>
   <description>
-        An Ionic Framework and Cordova project.
+        A Speech Language Phatology test
     </description>
   <author email="me@felipedearaujo.com" href="http://www.felipedearaujo.com/">
       Felipe de Araujo

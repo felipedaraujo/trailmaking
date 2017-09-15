@@ -66,9 +66,7 @@ angular.module('starter.controllers').
       lastCircleCenter = getCircleCenter(content, lastCircle);
 
       if ($stateParams.part == 'part-a') {
-
         Timer.start();
-        console.log("Timer started");
       }
       canvasInitiate = true;
     }
